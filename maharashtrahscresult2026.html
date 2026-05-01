@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maharashtra State Board of Secondary & Higher Secondary Education - HSC Result</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial, sans-serif;
+background:#f3f3f3;
+}
+
+.header{
+background:#0b3c6f;
+color:white;
+text-align:center;
+padding:14px;
+font-size:18px;
+font-weight:bold;
+}
+
+.box{
+background:white;
+width:95%;
+max-width:520px;
+margin:20px auto;
+padding:18px;
+border-radius:5px;
+box-shadow:0px 0px 6px rgba(0,0,0,0.3);
+}
+
+label{
+font-weight:bold;
+font-size:14px;
+}
+
+input{
+width:100%;
+padding:10px;
+margin-top:6px;
+margin-bottom:14px;
+border:1px solid #ccc;
+border-radius:4px;
+font-size:15px;
+}
+
+button{
+background:#1e66d0;
+color:white;
+border:none;
+padding:11px;
+width:100%;
+font-size:16px;
+border-radius:4px;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+margin-top:15px;
+font-size:14px;
+}
+
+th, td{
+border:1px solid #cfcfcf;
+padding:8px;
+text-align:center;
+}
+
+th{
+background:#eeeeee;
+}
+
+.summary{
+background:#d7e6ea;
+font-weight:bold;
+}
+
+.hidden{
+display:none;
+}
+
+.loading{
+text-align:center;
+font-size:18px;
+padding:30px;
+}
+
+.footer{
+text-align:center;
+font-size:13px;
+margin-top:12px;
+color:#555;
+}
+
+</style>
+
+<script>
+
+function showLoading(){
+
+let seat=document.getElementById("seat").value;
+let mother=document.getElementById("mother").value;
+
+if(seat=="" || mother==""){
+alert("Enter Seat Number and Mother's Name");
+return;
+}
+
+document.getElementById("formBox").style.display="none";
+document.getElementById("loadingBox").style.display="block";
+
+setTimeout(showResult, 2000);
+
+}
+
+function showResult(){
+
+document.getElementById("loadingBox").style.display="none";
+document.getElementById("resultBox").style.display="block";
+
+}
+
+</script>
+
+</head>
+
+<body>
+
+<div class="header">
+Maharashtra State Board of Secondary & Higher Secondary Education<br>
+HSC Examination March - 2026 RESULT
+</div>
+
+
+<div class="box" id="formBox">
+
+<label>Seat Number</label>
+<input type="text" id="seat">
+
+<label>Mother's Name</label>
+<input type="text" id="mother">
+
+<button onclick="showLoading()">View Result</button>
+
+</div>
+
+
+<div class="box hidden loading" id="loadingBox">
+Processing Result... Please Wait ⏳
+</div>
+
+
+<div class="box hidden" id="resultBox">
+
+<p><b>Candidate Name:</b> Piyush Kashinath Lonare</p>
+<p><b>Mother's Name:</b> Sunita</p>
+<p><b>Stream:</b> Science</p>
+
+<table>
+
+<tr>
+<th>Subject</th>
+<th>Theory</th>
+<th>Practical</th>
+<th>Total</th>
+</tr>
+
+<tr>
+<td>ENGLISH</td>
+<td>089</td>
+<td>007</td>
+<td>096</td>
+</tr>
+
+<tr>
+<td>PHYSICS</td>
+<td>067</td>
+<td>018</td>
+<td>085</td>
+</tr>
+
+<tr>
+<td>CHEMISTRY</td>
+<td>067</td>
+<td>018</td>
+<td>085</td>
+</tr>
+
+<tr>
+<td>MATHEMATICS</td>
+<td>068</td>
+<td>027</td>
+<td>095</td>
+</tr>
+
+<tr>
+<td>MARATHI</td>
+<td>048</td>
+<td>021</td>
+<td>069</td>
+</tr>
+
+<tr class="summary">
+<td colspan="3">Total Marks</td>
+<td>430 / 500</td>
+</tr>
+
+<tr class="summary">
+<td colspan="3">Percentage</td>
+<td>86.00%</td>
+</tr>
+
+<tr class="summary">
+<td colspan="3">Result</td>
+<td>PASS</td>
+</tr>
+
+</table>
+
+<div class="footer">
+Marks calculated as per MSBSHSE format
+</div>
+
+</div>
+
+</body>
+</html>
